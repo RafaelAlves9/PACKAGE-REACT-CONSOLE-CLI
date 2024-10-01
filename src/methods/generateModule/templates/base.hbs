@@ -1,0 +1,10 @@
+import use{{name}}Controller from './{{name}}.controller';
+import {{name}}Component from './{{name}}.component';
+
+const {{name}} = () => {
+  const controller = use{{name}}Controller();
+
+  return <{{name}}Component {...controller}/>;
+};
+
+export default {{name}};
