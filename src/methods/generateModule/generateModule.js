@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import {createFile} from "../../utils/createFile.js";
 import {pascalCase} from "../../utils/formatString.js";
-import {generateFile} from "../../utils/generateFile.js";
+import {buildContentFile} from "../../utils/buildContentFile.js";
 import {getNameAndDestinationParam} from "../../utils/getNameAndDestinationParam.js";
 import {readTemplate} from "../../utils/readTemplate.js";
 
@@ -21,7 +21,7 @@ const generateModule = (moduleName, destinationPath) => {
 
   templateList.forEach((t) => {
     const template = readTemplate(path.join(templateDir, t + '.hbs'));
-    const content = generateFile(template, variables);
+    const content = buildContentFile(template, variables);
     const filePath = path.join(destinationPath, `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`);
     createFile(filePath, content);
   });

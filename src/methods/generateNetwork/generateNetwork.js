@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+import {getNameAndDestinationParam} from "../../utils/getNameAndDestinationParam.js";
+import {pascalCase} from "../../utils/formatString.js";
+import path from "path";
+import {readTemplate} from "../../utils/readTemplate.js";
+import {buildContentFile} from "../../utils/buildContentFile.js";
+import {createFile} from "../../utils/createFile.js";
+import {fileURLToPath} from "url";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+const templateDir = path.resolve(dirname, 'templates');
+const templateList = ['network', 'interface', 'request', 'response'];
+
+export const generateNetwork = (moduleName, destinations) => {
+  try{
+    const variables = {
+      name: moduleName,
+      pascalCase: pascalCase(moduleName),
+    };
+
+    for(let i = 0; i < templateList.length; i++) {
+      const item = templateList[i];
+      const template = readTemplate(path.join(templateDir, item + '.hbs'));
+      const content = buildContentFile(template, variables);
+      const destination = destinations[item];
+      const filePath = path.join(destination.path, destination.pathName);
+      createFile(filePath, content);
+    }
+
+    console.log(`Network ${moduleName} gerado com sucesso!`);
+  }
+  catch (error) {
+    console.error(error);
+  }
+};
+
+const { moduleName } = await getNameAndDestinationParam();
+
+const destinations = {
+  'network': {
+    path: 'src/business/network',
+    pathName: `${moduleName}.network.ts`,
+  },
+  'interface': {
+    path: 'src/business/network/interface',
+    pathName: `${moduleName}.interface.ts`,
+  },
+  'request': {
+    path: 'src/business/model/request',
+    pathName: `${moduleName}.response.ts`,
+  },
+  'response': {
+    path: 'src/business/model/response',
+    pathName: `${moduleName}.response.ts`,
+  },
+};
+
+generateNetwork(moduleName, destinations);

@@ -1,6 +1,6 @@
 {
   "name": "react-console-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "webpack"
   },
   "bin": {
-    "generate-module": "./src/methods/generateModule/generateModule.js"
+    "generate-module": "./src/methods/generateModule/generateModule.js",
   },
   "keywords": [],
   "author": "",

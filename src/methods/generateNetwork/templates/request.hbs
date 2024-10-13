@@ -1,0 +1,18 @@
+import z from "zod";
+
+export const Z{{name}}Request = z.object({
+
+});
+
+export const Z{{name}}UpdateRequest = z.object({
+
+});
+
+export const Z{{name}}PaginationRequest = z.object({
+    pageNumber: z.number(),
+    pageSize: z.number(),
+});
+
+export type T{{name}}Request = z.infer<typeof Z{{name}}Request>;
+export type T{{name}}UpdateRequest = z.infer<typeof Z{{name}}UpdateRequest>;
+export type T{{name}}PaginationRequest = z.infer<typeof Z{{name}}PaginationRequest>;

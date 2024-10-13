@@ -1,0 +1,11 @@
+import {I{{name}} from './interface/I{{name}}.interface.ts';
+import {T{{name}}Response, T{{name}}PaginationResponse} from '@response/{{name}}Response.ts';
+import {T{{name}}Request, T{{name}}UpdateRequest, T{{name}}PaginationRequest} from '@request/{{name}}Request.ts';
+
+export interface I{{name}} {
+    create(data: T{{name}}Request): Promise<boolean>;
+    update(data: T{{name}}UpdateRequest): Promise<boolean>;
+    delete(id: number): Promise<boolean>;
+    getById(id: number): Promise<T{{name}}Response>;
+    getPagination(data: T{{name}}PaginationRequest): Promise<T{{name}}PaginationResponse>;
+};
