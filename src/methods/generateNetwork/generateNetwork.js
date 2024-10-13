@@ -48,7 +48,7 @@ const destinations = {
   },
   'request': {
     path: 'src/business/model/request',
-    pathName: `${moduleName}.response.ts`,
+    pathName: `${moduleName}.request.ts`,
   },
   'response': {
     path: 'src/business/model/response',
