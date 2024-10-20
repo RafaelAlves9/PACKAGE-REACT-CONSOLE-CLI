@@ -1,8 +1,8 @@
-# React Console CLI
+### React Console CLI
 
 **React Console CLI** é uma biblioteca para projetos React que permite criar componentes e services diretamente do terminal, agilizando o desenvolvimento e garantindo uma organização padronizada. Inspirada na CLI do Angular, esta ferramenta facilita a criação de módulos e serviços de forma rápida e consistente.
 
-## Instalação
+### Instalação
 
 Para instalar a biblioteca no seu projeto, execute o comando:
 
@@ -10,13 +10,13 @@ npm install react-console-cli --save-dev
 
 ### Funcionalidades
 
-## Criar Componente
+# Criar Componente
 
 Para criar um novo componente, use o seguinte comando:
-# npx react-console-cli generate-component <NomeDoComponente> <CaminhoDoComponente>
+npx react-console-cli generate-component <NomeDoComponente> <CaminhoDoComponente>
 
 Exemplo:
-# npx react-console-cli generate-component Header src/components/Header
+npx react-console-cli generate-component Header src/components/Header
 
 Com o comando de criação de componentes, você pode gerar uma pasta completa contendo:
 
@@ -28,7 +28,7 @@ Com o comando de criação de componentes, você pode gerar uma pasta completa c
 
 O usuário pode escolher o nome e o local onde o componente será gerado.
 
-## Criar Service
+# Criar Service
 
 Além de componentes, a CLI também gera uma camada de **Service** responsável por centralizar as consultas ao backend. Ao usar o comando de service, são criados:
 
@@ -36,7 +36,7 @@ Para criar um novo service, use o comando:
 npx react-console-cli generate-service <NomeDoService> <CaminhoDoService>
 
 Exemplo:
-# npx react-console-cli generate-service AuthService src/services/AuthService
+npx react-console-cli generate-service AuthService src/services/AuthService
 
 - `Service.ts` - A lógica principal da comunicação com o backend.
 - `IService.ts` - Interface definindo o contrato dos métodos do Service.
