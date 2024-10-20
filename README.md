@@ -1,6 +1,6 @@
 # React Console CLI
 
-**React Console CLI** é uma biblioteca para projetos React que permite criar componentes e services diretamente do terminal, agilizando o desenvolvimento e garantindo uma organização padronizada. Inspirada na CLI do Angular, esta ferramenta facilita a criação de módulos e serviços de forma rápida e consistente.
+**React Console CLI** é uma biblioteca para projetos React que permite criar componentes e networks diretamente do terminal, agilizando o desenvolvimento e garantindo uma organização padronizada. Inspirada na CLI do Angular, esta ferramenta facilita a criação de módulos e serviços de forma rápida e consistente.
 
 ## Instalação
 
@@ -28,25 +28,25 @@ Com o comando de criação de componentes, você pode gerar uma pasta completa c
 
 O usuário pode escolher o nome e o local onde o componente será gerado.
 
-### Criar Service
+### Criar Network
 
-Além de componentes, a CLI também gera uma camada de **Service** responsável por centralizar as consultas ao backend. Ao usar o comando de service, são criados:
+Além de componentes, a CLI também gera uma camada de **Network** responsável por centralizar as consultas ao backend. Ao usar o comando de network, são criados:
 
-Para criar um novo service, use o comando:
-npx react-console-cli generate-service <NomeDoService> <CaminhoDoService>
+Para criar um novo network, use o comando:
+npx react-console-cli generate-network <NomeDoNetwork> <CaminhoDoNetwork>
 
 Exemplo:
-npx react-console-cli generate-service AuthService src/services/AuthService
+npx react-console-cli generate-network AuthNetwork src/networks/AuthNetwork
 
-- `Service.ts` - A lógica principal da comunicação com o backend.
-- `IService.ts` - Interface definindo o contrato dos métodos do Service.
+- `Network.ts` - A lógica principal da comunicação com o backend.
+- `INetwork.ts` - Interface definindo o contrato dos métodos do Network.
 - `DTOResponse.ts` - Data Transfer Object para a resposta do backend.
 - `DTORequest.ts` - Data Transfer Object para as requisições ao backend.
 
 Esse comando garante que os serviços estejam devidamente organizados, facilitando o gerenciamento e a manutenção do código.
 
 ## Inspiração
-Essa biblioteca foi criada com inspiração no CLI do Angular, com o objetivo de padronizar a organização de projetos React, aumentar a produtividade na criação de componentes e services, e garantir consistência no código.
+Essa biblioteca foi criada com inspiração no CLI do Angular, com o objetivo de padronizar a organização de projetos React, aumentar a produtividade na criação de componentes e networks, e garantir consistência no código.
 
 ## Contribuições
 Sinta-se à vontade para abrir issues e pull requests! Toda ajuda é bem-vinda para melhorar a ferramenta e adaptar a novos casos de uso.
