@@ -5,11 +5,11 @@ export const Z{{name}}Response = z.object({
 });
 
 export const Z{{name}}PaginationResponse = z.object({
-    items: z.array(),
-    currentPage: z.number(),
-    totalPages: z.number(),
-    pageSize: z.number(),
-    totalCount: z.number(),
+   items: z.array(Z{{name}}Response),
+   currentPage: z.number(),
+   totalPages: z.number(),
+   pageSize: z.number(),
+   totalCount: z.number(),
 });
 
 export type T{{name}}Response = z.infer<typeof Z{{name}}Response>;

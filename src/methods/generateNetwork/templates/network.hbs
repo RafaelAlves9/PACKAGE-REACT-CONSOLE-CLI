@@ -1,66 +1,60 @@
 import {Base} from './Base.network';
-import {I{{name}} from './interface/I{{name}}.interface.ts';
-import {T{{name}}Response, T{{name}}PaginationResponse} from '@response/{{name}}Response.ts';
-import {T{{name}}Request, T{{name}}UpdateRequest, T{{name}}PaginationRequest} from '@request/{{name}}Request.ts';
+import {I{{name}}Network} from './interface/{{name}}.interface.ts';
+import {T{{name}}PaginationResponse, T{{name}}Response} from '@response/{{name}}.response.ts';
+import {T{{name}}PaginationRequest, T{{name}}Request, T{{name}}UpdateRequest} from '@request/{{name}}.request.ts';
 
-export class {{name}}Network extends Base implements I{{name}} {
-    private _controllerName = '{{name}}/';
+export class {{name}}Network extends Base implements I{{name}}Network {
+   private _controllerName = '{{name}}/';
 
-    public create = async (data: T{{name}}Request): Promise<boolean> => {
-        return await this._private.post(this._controllerName + 'create', data)
-            .then((res) => {
-                return res.data;
-            })
-            .catch((error) => {
-                throw error;
-            });
-        };
-    };
+   public create = async (data: T{{name}}Request): Promise<boolean> => {
+      return await this._private.post(this._controllerName + 'create', data)
+      .then((res) => {
+         return res.data;
+      })
+      .catch((error) => {
+         throw error;
+      });
+   };
 
-    public update = (data: T{{name}}UpdateRequest): Promise<boolean> => {
-        return await this._private.put(this._controllerName + 'update', data)
-            .then((res) => {
-                return res.data;
-            })
-            .catch((error) => {
-                throw error;
-            });
-        };
-    };
+   public update = (data: T{{name}}UpdateRequest): Promise<boolean> => {
+      return await this._private.put(this._controllerName + 'update', data)
+      .then((res) => {
+         return res.data;
+      })
+      .catch((error) => {
+         throw error;
+      });
+   };
 
-    public delete = (id: number): Promise<boolean> => {
-        return await this._private.put(this._controllerName + `delete?id=${id}`)
-            .then((res) => {
-                return res.data;
-            })
-            .catch((error) => {
-                throw error;
-            });
-        };
-    };
+   public delete = (id: number): Promise<boolean> => {
+      return await this._private.put(this._controllerName + `delete?id=${id}`)
+      .then((res) => {
+         return res.data;
+      })
+      .catch((error) => {
+         throw error;
+      });
+   };
 
-    public getById = (id: number): Promise<T{{name}}Response> => {
-        return await this._private.get(this._controllerName + `get_by_id?id=${id}`)
-            .then((res) => {
-                const data: T{{name}}Response = res.data;
-                return data;
-            })
-            .catch((error) => {
-                throw error;
-            });
-        };
-    };
+   public getById = (id: number): Promise<T{{name}}Response> => {
+      return await this._private.get(this._controllerName + `get_by_id?id=${id}`)
+      .then((res) => {
+         const data: T{{name}}Response = res.data;
+         return data;
+      })
+      .catch((error) => {
+         throw error;
+      });
+   };
 
-    public getPagination = (data: T{{name}}PaginationRequest): Promise<T{{name}}PaginationResponse> => {
-        return await this.private
-            .get(this._controllerName + `get_pagination?`)
-            .then((res) => {
-                const data: T{{name}}PaginationResponse = res.data;
-                return data;
-            })
-            .catch((error) => {
-                throw error;
-            });
-        };
-    };
-};
+   public getPagination = (data: T{{name}}PaginationRequest): Promise<T{{name}}PaginationResponse> => {
+      return await this.private.get(this._controllerName + `get_pagination?`)
+      .then((res) => {
+         const data: T{{name}}PaginationResponse = res.data;
+         return data;
+      })
+      .catch((error) => {
+         throw error;
+      });
+   };
+}
