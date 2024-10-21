@@ -13,10 +13,10 @@ npm install react-console-cli --save-dev
 ### Criar Componente
 
 Para criar um novo componente, use o seguinte comando:
-npx react-console-cli generate-component <NomeDoComponente> <CaminhoDoComponente>
+npx generate-component <NomeDoComponente> <CaminhoDoComponente>
 
 Exemplo:
-npx react-console-cli generate-component Header src/components/Header
+npx generate-component Header src/components/Header
 
 Com o comando de criação de componentes, você pode gerar uma pasta completa contendo:
 
@@ -33,10 +33,10 @@ O usuário pode escolher o nome e o local onde o componente será gerado.
 Além de componentes, a CLI também gera uma camada de **Network** responsável por centralizar as consultas ao backend. Ao usar o comando de network, são criados:
 
 Para criar um novo network, use o comando:
-npx react-console-cli generate-network <NomeDoNetwork> <CaminhoDoNetwork>
+npx generate-network <NomeDoNetwork>
 
 Exemplo:
-npx react-console-cli generate-network AuthNetwork src/networks/AuthNetwork
+npx generate-network AuthNetwork
 
 - `Network.ts` - A lógica principal da comunicação com o backend.
 - `INetwork.ts` - Interface definindo o contrato dos métodos do Network.
