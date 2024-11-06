@@ -1,9 +1,9 @@
-import {Base} from './Base.network';
-import {I{{name}}Network} from './interface/{{name}}.interface.ts';
+import {Base} from './Base.service';
+import {I{{name}}Service} from './interface/{{name}}.interface.ts';
 import {T{{name}}PaginationResponse, T{{name}}Response} from '@response/{{name}}.response.ts';
 import {T{{name}}PaginationRequest, T{{name}}Request, T{{name}}UpdateRequest} from '@request/{{name}}.request.ts';
 
-export class {{name}}Network extends Base implements I{{name}}Network {
+export class {{name}}Service extends Base implements I{{name}}Service {
    private _controllerName = '{{name}}/';
 
    public create = async (data: T{{name}}Request): Promise<boolean> => {

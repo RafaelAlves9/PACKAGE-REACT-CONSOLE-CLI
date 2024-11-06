@@ -1,12 +1,12 @@
 import {TUse{{name}}Controller} from './{{name}}.types';
 
-const {{name}}Component = (controller: TUse{{name}}Controller) => {
+const {{name}}View = (c: ReturnType<typeof Use{{name}}Controller>) => {
 
   return (
     <div>
-     <h1>{{name}} Component</h1>
+     <h1>{{name}} View</h1>
     </div>
   );
 };
 
-export default {{name}}Component;
+export default {{name}}View;
