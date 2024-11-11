@@ -1,6 +1,6 @@
 {
   "name": "react-console-cli",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": "Rafael Alves",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "bin": {
     "generate-module": "./src/methods/generateModule/generateModule.js",
-    "generate-service": "./src/methods/generateNetwork/generateService.js"
+    "generate-service": "./src/methods/generateService/generateService.js"
   },
   "keywords": ["cli", "react-cli", "react-console-cli"],
   "license": "ISC",
