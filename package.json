@@ -1,6 +1,6 @@
 {
   "name": "react-console-cli",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Rafael Alves",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build": "webpack"
   },
   "bin": {
-    "generate-component": "./src/methods/generateModule/generateModule.js",
+    "generate-module": "./src/methods/generateModule/generateModule.js",
     "generate-service": "./src/methods/generateNetwork/generateService.js"
   },
   "keywords": ["cli", "react-cli", "react-console-cli"],

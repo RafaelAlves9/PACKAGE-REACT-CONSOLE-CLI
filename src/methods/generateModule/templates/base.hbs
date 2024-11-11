@@ -1,10 +1,10 @@
-import use{{name}}Controller from './{{name}}.controller';
+import {{name}}Controller from './{{name}}.controller';
 import {{name}}View from './{{name}}.view';
 
 const {{name}} = () => {
-  const controller = use{{name}}Controller();
+   const controller = {{name}}Controller();
 
-  return <{{name}}View {...controller}/>;
+   return <{{name}}View {...controller}/>;
 };
 
 export default {{name}};

@@ -1,11 +1,12 @@
+import {{name}}Controller from './{{name}}.controller';
 
-const {{name}}View = (c: ReturnType<typeof Use{{name}}Controller>) => {
+const {{name}}View = (c: ReturnType<typeof {{name}}Controller>) => {
 
-  return (
-    <div>
-     <h1>{{name}} View</h1>
-    </div>
-  );
+   return (
+     <div>
+       <h1>{{name}} View</h1>
+     </div>
+   );
 };
 
 export default {{name}}View;
