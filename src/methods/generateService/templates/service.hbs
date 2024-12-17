@@ -48,7 +48,7 @@ export class {{name}}Service extends Base implements I{{name}}Service {
    };
 
    public getPagination = async (data: T{{name}}PaginationRequest): Promise<T{{name}}PaginationResponse> => {
-      return await this.private.get(this._controllerName + `get_pagination?`)
+      return await this._private.get(this._controllerName + `get_pagination?`)
       .then((res) => {
          const data: T{{name}}PaginationResponse = res.data;
          return data;

@@ -17,18 +17,33 @@ const generateModule = (moduleName, destinationPath) => {
    };
    const templateDir = path.resolve(__dirname, "templates");
 
-   const templateList = ["base", "view", "controller", "types", "styles"];
-   console.log("templateDir", templateDir);
+   const templateList = [
+      {
+         name: "base",
+         path: `${variables.pascalCase}/${variables.pascalCase}.tsx`,
+      },
+      {
+         name: "view",
+         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+      },
+      {
+         name: "controller",
+         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+      },
+      {
+         name: "types",
+         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+      },
+      {
+         name: "styles",
+         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+      },
+   ];
 
    templateList.forEach((t) => {
-      const template = readTemplate(path.join(templateDir, t + ".hbs"));
+      const template = readTemplate(path.join(templateDir, t.name + ".hbs"));
       const content = buildContentFile(template, variables);
-      const filePath = path.join(
-         destinationPath,
-         t === "base"
-            ? `${variables.pascalCase}.tsx`
-            : `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`
-      );
+      const filePath = path.join(destinationPath, t.path);
       createFile(filePath, content);
    });
 
