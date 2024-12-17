@@ -24,19 +24,19 @@ const generateModule = (moduleName, destinationPath) => {
       },
       {
          name: "view",
-         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+         path: `${variables.pascalCase}/${variables.pascalCase}.view.tsx`,
       },
       {
          name: "controller",
-         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+         path: `${variables.pascalCase}/${variables.pascalCase}.controller.tsx`,
       },
       {
          name: "types",
-         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+         path: `${variables.pascalCase}/${variables.pascalCase}.types.tsx`,
       },
       {
          name: "styles",
-         path: `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`,
+         path: `${variables.pascalCase}/${variables.pascalCase}.styles.tsx`,
       },
    ];
 
