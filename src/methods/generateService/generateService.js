@@ -42,7 +42,7 @@ const destinations = {
       pathName: `${moduleName}.service.ts`,
    },
    interface: {
-      path: "business/services/interface",
+      path: "business/services/interfaces",
       pathName: `${moduleName}.interface.ts`,
    },
    request: {
