@@ -38,19 +38,19 @@ const { moduleName } = await getNameAndDestinationParam();
 
 const destinations = {
    service: {
-      path: "src/services",
+      path: "business/services",
       pathName: `${moduleName}.service.ts`,
    },
    interface: {
-      path: "src/services/interface",
+      path: "business/services/interface",
       pathName: `${moduleName}.interface.ts`,
    },
    request: {
-      path: "src/models/request",
+      path: "business/models/request",
       pathName: `${moduleName}.request.ts`,
    },
    response: {
-      path: "src/models/response",
+      path: "business/models/response",
       pathName: `${moduleName}.response.ts`,
    },
 };

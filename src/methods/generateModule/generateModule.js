@@ -25,7 +25,9 @@ const generateModule = (moduleName, destinationPath) => {
       const content = buildContentFile(template, variables);
       const filePath = path.join(
          destinationPath,
-         `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`
+         t === "base"
+            ? `${variables.pascalCase}.tsx`
+            : `${variables.pascalCase}/${variables.pascalCase}.${t}.tsx`
       );
       createFile(filePath, content);
    });
