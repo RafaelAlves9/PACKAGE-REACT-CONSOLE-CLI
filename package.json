@@ -1,19 +1,23 @@
 {
-  "name": "@copa/react-cli",
+  "name": "@copaio/react-cli",
   "version": "1.0.0",
   "author": "Rafael Alves",
-  "description": "",
+  "description": "**React Console CLI** é uma biblioteca para projetos React que permite criar componentes e networks diretamente do terminal, agilizando o desenvolvimento e garantindo uma organização padronizada. Inspirada na CLI do Angular, esta ferramenta facilita a criação de módulos e serviços de forma rápida e consistente.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "webpack"
   },
   "bin": {
-    "generate-module": "./src/methods/generateModule/generateModule.js",
-    "generate-service": "./src/methods/generateService/generateService.js"
+    "generate-module": "src/methods/generateModule/generateModule.js",
+    "generate-service": "src/methods/generateService/generateService.js"
   },
-  "keywords": ["cli", "react-cli", "react-console-cli"],
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "react-cli",
+    "@copaio/react-cli",
+    "@copaio"
+  ],
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
