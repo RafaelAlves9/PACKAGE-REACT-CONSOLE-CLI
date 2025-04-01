@@ -27,8 +27,8 @@ const generateModule = (moduleName, destinationPath) => {
          path: `${variables.pascalCase}/${variables.pascalCase}.view.tsx`,
       },
       {
-         name: "model",
-         path: `${variables.pascalCase}/${variables.pascalCase}.model.tsx`,
+         name: "controller",
+         path: `${variables.pascalCase}/${variables.pascalCase}.controller.tsx`,
       },
       {
          name: "types",

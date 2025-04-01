@@ -1,6 +1,6 @@
 {
-  "name": "react-console-cli",
-  "version": "2.1.7",
+  "name": "@copa/react-cli",
+  "version": "1.0.0",
   "author": "Rafael Alves",
   "description": "",
   "main": "index.js",
